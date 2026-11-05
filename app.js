@@ -16,8 +16,7 @@
     const hp = hashParams();
     if (hp.d) {
       try { localStorage.setItem("desk_data_path", hp.d); } catch (e) {}
-      // Strip secret from the visible URL after capture.
-      history.replaceState(null, "", location.pathname + location.search);
+      // keep fragment so Add to Home Screen keeps access (iOS standalone has separate storage)
       return hp.d;
     }
     try { return localStorage.getItem("desk_data_path"); } catch (e) { return null; }
@@ -25,7 +24,7 @@
 
   function base() {
     if (!state.dataPath) return null;
-    return `/d/${state.dataPath}`;
+    return `d/${state.dataPath}`;
   }
 
   async function getJSON(path) {
