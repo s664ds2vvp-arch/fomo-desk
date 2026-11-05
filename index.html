@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+  <title>Grok Bot</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="app">
+    <div id="errorBar" class="error-bar hidden"></div>
+    <header class="nav">
+      <button class="avatar" id="avatarBtn" aria-label="Account">GB</button>
+      <div class="nav-title">Grok Bot <span class="chev">›</span></div>
+      <div class="nav-actions">
+        <button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button>
+        <button id="bellBtn" class="icon-btn" aria-label="Alerts"><span id="bellDot" class="dot hidden"></span>🔔</button>
+      </div>
+    </header>
+
+    <main id="screen-home" class="screen">
+      <div class="balance-row">
+        <div id="balance" class="balance">—</div>
+        <span id="paperBadge" class="pill paper hidden">PAPER</span>
+      </div>
+      <div class="subline">
+        <span id="todayPct" class="muted">—</span>
+        <span id="mult" class="pill green hidden"></span>
+      </div>
+      <canvas id="homeChart" class="home-chart"></canvas>
+      <div id="homeEmpty" class="empty hidden">Waiting for the first trade</div>
+      <div class="range-row" id="rangeRow"></div>
+      <h2 class="section">Agents · <span id="agentsRunning">5 running</span></h2>
+      <div id="agentCarousel" class="carousel"></div>
+      <h2 class="section">Activity · See all</h2>
+      <div id="homeActivity" class="list"></div>
+    </main>
+
+    <main id="screen-agents" class="screen hidden"></main>
+    <main id="screen-activity" class="screen hidden">
+      <h2 class="section">Activity</h2>
+      <div id="activityEmpty" class="empty hidden">Nothing yet tonight</div>
+      <div id="activityList" class="list"></div>
+    </main>
+    <main id="screen-account" class="screen hidden"></main>
+    <main id="screen-auditor" class="screen hidden"></main>
+    <main id="screen-coin" class="screen hidden"></main>
+
+    <nav class="tabbar">
+      <button data-tab="home" class="tab on">Home</button>
+      <button data-tab="agents" class="tab">Agents</button>
+      <button data-tab="activity" class="tab">Activity</button>
+      <button data-tab="account" class="tab">Account</button>
+    </nav>
+  </div>
+  <script src="chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
