@@ -1,1 +1,1 @@
-{"open":[{"id":7,"mint":"BTCUSDT","opened_at":"2026-11-08T17:21:03.506Z","entry_price":75699.6,"size_usd":9783.96,"peak_price":75673.3,"stop_price":75869.81652718074,"stop_pct":0.22485789512854973,"trail_active":0,"closed_at":null,"exit_price":null,"exit_reason":null,"pnl_usd":null,"fees_usd":null,"mode":"LIVE","status":"open","side":"SHORT","tp1":75410.23190379277,"tp2":75257.03702933011,"risk_usd":22.0,"setup_kind":"breakout_retest","invalidated":0}]}
+{"open":[]}
